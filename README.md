@@ -15,7 +15,9 @@ npm install -g remat
 
 To schedule a reminder execute: `rem <when> <...message>`
 \
-If you want to avoid escaping, separate the `<when>` and `<...message>` args with `--`: `rem in 20 min -- prepare for work`
+If you want to avoid escaping, separate the `<when>` and `<...message>` args with `--`:
+\
+`rem in 20 min -- prepare for work`
 \
 Use the regular `atd` commands to list (`atq`) and cancel (`atrm`) the scheduled jobs.
 
@@ -23,7 +25,7 @@ Use the regular `atd` commands to list (`atq`) and cancel (`atrm`) the scheduled
 # specify when to deliver the reminder using natural language
 rem 14:52 go to the gym
 rem "tomorrow at 9:00" go to the gym
-rem "4th of july at noon" go to the gym
+rem 4th of july at noon -- go to the gym
 rem "next friday at 4 pm" go to the gym
 rem 2m go to the gym
 rem 18 go to the gym
