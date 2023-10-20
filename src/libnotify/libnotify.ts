@@ -13,7 +13,7 @@ const defaultOptions: NotificationOptions = {
 };
 
 const escape = (str: string) => {
-  const escapedString = str.replace(/'/g, "\\'");
+  const escapedString = str.replace(/'/g, `'\\''`);
   return `'${escapedString}'`;
 };
 

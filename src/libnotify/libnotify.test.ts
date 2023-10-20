@@ -13,5 +13,5 @@ test("builds command with custom options", (t) => {
 
 test("escapes single quotes", (t) => {
   const command = buildCommand("hello 'world'");
-  t.is(command, "notify-send --app-name 'remat' --urgency critical --expire-time 0 'remat' 'hello \\'world\\''");
+  t.is(command, "notify-send --app-name 'remat' --urgency critical --expire-time 0 'remat' 'hello '\\''world'\\'''");
 });
