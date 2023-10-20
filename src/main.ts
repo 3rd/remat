@@ -26,8 +26,9 @@ const main = async () => {
     title: formatTitle(when),
   });
 
-  await schedule(when, command);
+  const atOutput = await schedule(when, command);
   console.log(chalk.green(`Scheduled`), `reminder for`, chalk.yellow(when.toLocaleString()));
+  console.log(chalk.magenta(`at:`), atOutput);
 };
 
 main();

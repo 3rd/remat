@@ -11,6 +11,10 @@ export const formatAtDate = (date: Date) => {
 };
 
 export const schedule = async (date: Date, command: string) => {
-  const { stdout } = await execa("at", [formatAtDate(date)], { input: command });
-  return stdout;
+  const { stderr } = await execa("at", [formatAtDate(date)], { input: command });
+  return stderr
+    .trim()
+    .split("\n")
+    .filter((line) => !line.includes("warning:"))
+    .join("\n");
 };
