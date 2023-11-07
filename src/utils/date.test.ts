@@ -24,7 +24,7 @@ test("getAtDatetime resolves relative time", (t) => {
     ["tomorrow at 9am", new Date(2020, 12 - 1, 21, 9, 0)],
     ["next friday at 9am", new Date(2020, 12 - 1, 25, 9, 0)],
     // special
-    ["18", new Date(2020, 12 - 1, 20, 18, 0)],
+    ["30", new Date(2020, 12 - 1, 20, 13, 0)],
     [":45", new Date(2020, 12 - 1, 20, 12, 45)],
   ] as const;
   for (const [when, expected] of cases) {
